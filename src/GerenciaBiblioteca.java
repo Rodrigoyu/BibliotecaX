@@ -27,4 +27,20 @@ public class GerenciaBiblioteca {
         }
         System.out.println("Item Não encontrado!");
     }
+
+    public void devolverItem(int id){
+        for (ItemBiblioteca item : listaItems) {
+            if (item.getId() == id) {
+                if (item instanceof emprestimosBiblioteca) {
+                    ((emprestimosBiblioteca) item).devolver();
+                }else{
+                    System.out.println("O livro " + item.getTitulo() + "não está disponivel");
+                }
+            return;
+            }
+        }
+        System.out.println("Item Não encontrado!");
+    }
+
+
 }

@@ -33,8 +33,12 @@ public class Livro extends ItemBiblioteca implements emprestimosBiblioteca {
 
     @Override
     public void devolver() {
+        if (this.emprestado) {
         this.emprestado = false;
         System.out.println("O livro "+ getTitulo() +  " foi devolvido!");
+        }else {
+            System.out.println("esse livro não foi emprestado!");
+        }
 
     }
 

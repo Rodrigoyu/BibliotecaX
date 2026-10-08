@@ -17,6 +17,8 @@ public class Main {
         System.out.println("\n--- TESTANDO EMPRÉSTIMOS ---");
         biblioteca.emprestarItem(1); // Sucesso
         biblioteca.emprestarItem(1); // Aviso de já emprestado
+        biblioteca.devolverItem(1);
+
 
         // 4. Listando novamente para ver a alteração de status
         biblioteca.listarAcervo();
